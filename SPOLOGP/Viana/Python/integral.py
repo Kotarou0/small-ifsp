@@ -8,7 +8,7 @@ print("Qual é o valor de n? (inteiro)")
 n = int(input())
 
 def function(x):
-	return x*x
+	return pow((1 + 1/n), n)**(-x**2)
 
 points = []
 integral = 0
