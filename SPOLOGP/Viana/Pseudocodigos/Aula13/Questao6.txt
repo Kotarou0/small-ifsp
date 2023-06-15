@@ -1,0 +1,16 @@
+Programa Questao6
+Var
+	i, soma: inteiro
+	A: conjunto[1..5] de inteiro
+Inicio
+	soma <- 0
+	para i de 0 ate 4 passo 1 faca
+		leia(A[i])
+		se (A[i] mod 2 = 1) faca
+			inicio
+				soma <- soma + A[i]
+			fim
+		fim_se
+	fim_para
+	escreva("A soma de todos os elementos ímpares é: ", soma)
+Fim
