@@ -1,14 +1,45 @@
-print("Qual é o valor inicial da integral? (inteiro)")
-a = int(input())
+import math
+import os
 
-print("Qual é o valor final da integral? (inteiro)")
-b = int(input())
+os.system('clear')
 
-print("Qual é o valor de n? (inteiro)")
-n = int(input())
+#print("Qual é a função que você quer integrar? (em termos de x)")
+#expression = input()
+expression = "(math.e)**(-(x**2))"
+
+a = ""
+while type(a) != float:
+	print("Qual é o valor inicial da integral?")
+	try:
+		a = float(input())
+	except:
+		print("Por favor, digite um número. Tente novamente.\n")
+
+b = ""
+while type(b) != float:
+	print("Qual é o valor final da integral?")
+	try:
+		b = float(input())
+	except:
+		print("Por favor, digite um número. Tente novamente.\n")
+
+n = ""
+while type(n) != float:
+	print("Em quantos retângulos você quer dividir a função? (número positivo)")
+	try:
+		n = float(input())
+		if n == 0:
+			print("Por favor, digite um número positivo. Tente novamente.\n")
+			n = ""
+	except:
+		print("Por favor, digite um número inteiro. Tente novamente.\n")
 
 def function(x):
-	return pow((1 + 1/n), n)**(-x**2)
+	try:
+		return eval(expression)
+	except:
+		print("Os valores digitados estão fora do domínio da função ou não estão definidos. Por favor, tente novamente.")
+		quit()
 
 points = []
 integral = 0
