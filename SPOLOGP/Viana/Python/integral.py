@@ -3,9 +3,9 @@ import os
 
 os.system('clear')
 
-#print("Qual é a função que você quer integrar? (em termos de x)")
-#expression = input()
-expression = "(math.e)**(-(x**2))"
+print("Qual é a função que você quer integrar? (em termos de x)")
+expression = input()
+#expression = "(math.e)**(-(x**2))"
 
 a = ""
 while type(a) != float:
